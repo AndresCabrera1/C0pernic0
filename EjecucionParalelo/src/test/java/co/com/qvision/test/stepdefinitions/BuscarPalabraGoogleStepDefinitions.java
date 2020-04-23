@@ -39,7 +39,7 @@ public class BuscarPalabraGoogleStepDefinitions {
 
     @Entonces("^verifica la palabra buscada$")
     public void envia_el_comprobande_de_la_transaccion() {
-        theActorInTheSpotlight().should(seeThat(" La busqueda ",EncontroPalabra.verificar(), is(true)).because(" deberia ser exitosa "));
+        theActorInTheSpotlight().should(seeThat(" La busqueda ",EncontroPalabra.verificar(), is(true)).because(" %s deberia ser %s "));
     }
 
 }

@@ -1,7 +1,9 @@
+import com.sun.javafx.runtime.SystemProperties
+
 group 'EjecucionParalelo'
 version '1.0-SNAPSHOT'
 
-defaultTasks 'clean','test','aggregate','--info'
+defaultTasks 'clean','test','aggregate','--info','--debug'
 
 repositories {
     mavenCentral()
@@ -51,6 +53,12 @@ dependencies {
     compile group: 'com.sun.mail', name: 'javax.mail', version: '1.6.2'
 
 }
+
+/*tasks.withType(Test){
+    systemProperties = System.properties
+    maxParallelForks= Runtime.runtime.availableProcessors()
+}*/
+
 
 gradle.startParameter.continueOnFailure = true
 test.finalizedBy(aggregate)
