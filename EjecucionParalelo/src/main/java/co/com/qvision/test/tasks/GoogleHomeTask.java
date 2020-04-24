@@ -26,7 +26,6 @@ public class GoogleHomeTask implements Task {
     @Step("{0} ingresa a Qvision Shoping ")
     public <T extends Actor> void performAs(T actor) {
 
-
         actor.attemptsTo(
                 Open.url(homeGoogle.Url())
         );
